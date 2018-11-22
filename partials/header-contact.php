@@ -1,5 +1,5 @@
 <!-- Social Media -->
-<?php $lang = strtolower(get_locale()); ?> 
+<?php $lang = strtolower(get_locale()); ?>
 <?php if (have_rows('social_media_links', 'option')) : ?>
 
     <?php while (have_rows('social_media_links', 'option')) : the_row(); ?>
@@ -24,11 +24,11 @@ $phone = get_field('telefon', 'option');
 $phoneLink = get_field('telefon_link', 'option');
 ?>
 <a href="mailto:<?php echo $mail; ?>">
-    <i class="fa fa-envelope"></i> 
+    <i class="fa fa-envelope"></i>
     <span><?php echo $mail; ?></span>
 </a>
 <a href="tel:<?php echo $phoneLink;?>">
-    <i class="fa fa-phone"></i> 
+    <i class="fa fa-phone"></i>
     <span>
         <?php echo $phone;?>
     </span>
