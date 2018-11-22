@@ -1,0 +1,238 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: HTML5 Blank WordPress Theme\n"
+"POT-Creation-Date: 2018-05-02 09:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Jürgen Rabe | www.egado.de <rabe@egado.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION"
+
+#: 404.php:6
+msgid ""
+"Error 404: The site you are looking for could unfortunately not be found."
+msgstr ""
+
+#: 404.php:8
+msgid ""
+"Please check the URL, return to our <a href=\"http://spraachen.org/\">home "
+"page</a> or send us your questions by email to <a href=\"mail@spraachen.de\">"
+"mail@spraachen.de</a>.</br>Thank You!"
+msgstr ""
+
+#: archive.php:7
+msgid "Archives"
+msgstr ""
+
+#: author.php:9
+msgid "Author Archives for "
+msgstr ""
+
+#: author.php:15
+msgid "About "
+msgstr ""
+
+#: author.php:42 loop.php:22
+msgid "Published by"
+msgstr ""
+
+#: author.php:43 loop.php:23
+msgid "Leave your thoughts"
+msgstr ""
+
+#: author.php:43 loop.php:23
+msgid "1 Comment"
+msgstr ""
+
+#: author.php:43 loop.php:23
+msgid "% Comments"
+msgstr ""
+
+#: author.php:62 loop.php:39
+msgid "Sorry, nothing to display."
+msgstr ""
+
+#: category.php:7
+msgid "Categories for "
+msgstr ""
+
+#: comments.php:3
+msgid "Post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: comments.php:18
+msgid "Comments are closed here."
+msgstr ""
+
+#: footer.php:10
+msgid "Sitemap"
+msgstr ""
+
+#: functions.php:229 snippet.php:244
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:230 snippet.php:245
+msgid "Service Menu"
+msgstr ""
+
+#: functions.php:231 snippet.php:246
+msgid "Footer Links"
+msgstr ""
+
+#: functions.php:232 snippet.php:247
+msgid "Responsive"
+msgstr ""
+
+#: functions.php:273 snippet.php:288
+msgid "Widget Area 1"
+msgstr ""
+
+#: functions.php:274 functions.php:285 snippet.php:289 snippet.php:300
+msgid "Description for this widget-area..."
+msgstr ""
+
+#: functions.php:284 snippet.php:299
+msgid "Widget Area 2"
+msgstr ""
+
+#: functions.php:351 snippet.php:366
+msgid "View Article"
+msgstr ""
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr ""
+
+#. Name of the template
+msgid "Startseite"
+msgstr ""
+
+#. Name of the template
+msgid "Uebersicht"
+msgstr ""
+
+#. Name of the template
+msgid "Maintenance"
+msgstr ""
+
+#. Name of the template
+msgid "Standorte"
+msgstr ""
+
+#. Name of the template
+msgid "Produktseite"
+msgstr ""
+
+#: search.php:7
+#, php-format
+msgid "%s Search Results for "
+msgstr ""
+
+#: searchform.php:3
+msgid "To search, type and hit enter."
+msgstr ""
+
+#: searchform.php:4
+msgid "Search"
+msgstr ""
+
+#: tag.php:7
+msgid "Tag Archive: "
+msgstr ""
+
+#: inc/customizer.php:23 inc/customizer.php:31
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:25
+msgid "Upload an individual logo to replace the default site logo"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "Logo Color"
+msgstr ""
+
+#: inc/customizer.php:44
+msgid ""
+"Define the color of the default Logo  - only if you did not upload a logo "
+"before)"
+msgstr ""
+
+#: inc/customizer.php:55
+msgid "Branding Color"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "Define your branding color"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Define a secondary color that matches branding color"
+msgstr ""
+
+#: partials/article-404.php:3
+msgid "Page not found"
+msgstr ""
+
+#: partials/article-404.php:5
+msgid "Return home?"
+msgstr ""
+
+#: partials/article-news.php:13
+msgid "continue reading"
+msgstr ""
+
+#: partials/carousel.php:39
+msgid "Prevs"
+msgstr ""
+
+#: partials/carousel.php:42
+msgid "Next"
+msgstr ""
+
+#: partials/footer-contact.php:13
+msgid "Revoke the cookie consent"
+msgstr ""
+
+#: partials/news.php:21
+msgid "News"
+msgstr ""
+
+#: partials/related-articles.php:7
+msgid "More options"
+msgstr ""
+
+#. Name of the theme
+msgid "SAK Default Theme"
+msgstr ""
+
+#. Description of the theme
+msgid "modified from HTML5 Blank WordPress Theme"
+msgstr ""
+
+#. URI of the theme
+msgid "http://html5blank.com"
+msgstr ""
+
+#. Author of the theme
+msgid "Claudia Hillen thanks Todd Motto (@toddmotto)"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://chilliscope.de"
+msgstr ""

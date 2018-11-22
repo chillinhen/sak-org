@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: HTML5 Blank WordPress Theme\n"
+"POT-Creation-Date: 2018-05-02 09:22+0000\n"
+"PO-Revision-Date: 2018-05-02 09:23+0000\n"
+"Last-Translator: chillinhen <c.hillen@gmx.net>\n"
+"Language-Team: German\n"
+"Language: de-DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+"Report-Msgid-Bugs-To: \n"
+"Plural-Forms: nplurals=2; plural=n != 1"
+
+#: 404.php:8
+msgid ""
+"Please check the URL, return to our <a href=\"http://spraachen.org/\">home "
+"page</a> or send us your questions by email to <a href=\"mail@spraachen.de\">"
+"mail@spraachen.de</a>.</br>Thank You!"
+msgstr ""
+
+#: partials/footer-contact.php:13
+msgid "Revoke the cookie consent"
+msgstr "Cookie Zustimmung widerrufen"
+
+#: 404.php:6
+msgid ""
+"Error 404: The site you are looking for could unfortunately not be found."
+msgstr ""
+"Fehler 404: Die Seite, nach der Sie suchen, konnte leider nicht gefunden "
+"werden."
+
+#: archive.php:7
+msgid "Archives"
+msgstr "Archiv"
+
+#: author.php:9
+msgid "Author Archives for "
+msgstr "Autor-Archiv für "
+
+#: author.php:15
+msgid "About "
+msgstr "Über "
+
+#: author.php:42 loop.php:22
+msgid "Published by"
+msgstr "Veröffentlicht von"
+
+#: author.php:43 loop.php:23
+msgid "Leave your thoughts"
+msgstr "Schreibe einen Kommentar"
+
+#: author.php:43 loop.php:23
+msgid "1 Comment"
+msgstr "1 Kommentar"
+
+#: author.php:43 loop.php:23
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: author.php:62 loop.php:39
+msgid "Sorry, nothing to display."
+msgstr "Nichts gefunden, was den Suchkriterien entspricht."
+
+#: category.php:7
+msgid "Categories for "
+msgstr "Kategorien für"
+
+#: comments.php:3
+msgid "Post is password protected. Enter the password to view any comments."
+msgstr ""
+"Dieser Artikel ist passwortgeschützt. Um die Kommentare sehen zu können muss "
+"das Passwort eingegeben werden."
+
+#: comments.php:18
+msgid "Comments are closed here."
+msgstr "Kommentare sind geschlossen."
+
+#: footer.php:10
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: functions.php:229 snippet.php:244
+msgid "Main Menu"
+msgstr "Hauptmenu"
+
+#: functions.php:230 snippet.php:245
+msgid "Service Menu"
+msgstr "Service Menu"
+
+#: functions.php:231 snippet.php:246
+msgid "Footer Links"
+msgstr "Footer Links"
+
+#: functions.php:232 snippet.php:247
+msgid "Responsive"
+msgstr "Responsives Menu"
+
+#: functions.php:273 snippet.php:288
+msgid "Widget Area 1"
+msgstr "Widget-Bereich 1"
+
+#: functions.php:274 functions.php:285 snippet.php:289 snippet.php:300
+msgid "Description for this widget-area..."
+msgstr "Beschreibung für diesen Widget-Bereich…"
+
+#: functions.php:284 snippet.php:299
+msgid "Widget Area 2"
+msgstr "Widget-Bereich 2"
+
+#: functions.php:351 snippet.php:366
+msgid "View Article"
+msgstr "Artikel ansehen"
+
+#. Name of the template
+msgid "Full Width Page"
+msgstr "Seite mit voller Seitenbreite"
+
+#. Name of the template
+msgid "Startseite"
+msgstr "Startseite"
+
+#. Name of the template
+msgid "Uebersicht"
+msgstr "Uebersicht"
+
+#. Name of the template
+msgid "Maintenance"
+msgstr "Wartungsmodus"
+
+#. Name of the template
+msgid "Standorte"
+msgstr "Standorte"
+
+#. Name of the template
+msgid "Produktseite"
+msgstr "Produktseite"
+
+#: search.php:7
+#, php-format
+msgid "%s Search Results for "
+msgstr "%s Suchergebnisse für "
+
+#: searchform.php:3
+msgid "To search, type and hit enter."
+msgstr "Suchbegriff…"
+
+#: searchform.php:4
+msgid "Search"
+msgstr "Suchen"
+
+#: tag.php:7
+msgid "Tag Archive: "
+msgstr "Stichword-Archiv: "
+
+#: inc/customizer.php:23 inc/customizer.php:31
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer.php:25
+msgid "Upload an individual logo to replace the default site logo"
+msgstr ""
+"Laden Sie ein individuelles Logo hoch,um das Standard-Logo zu ersetzen."
+
+#: inc/customizer.php:43
+msgid "Logo Color"
+msgstr "Logo Farbe"
+
+#: inc/customizer.php:44
+msgid ""
+"Define the color of the default Logo  - only if you did not upload a logo "
+"before)"
+msgstr ""
+"Definieren Sie die Farbe des Standard-Logos - nur wenn Sie noch kein "
+"individuelles Logo hochgeladen haben"
+
+#: inc/customizer.php:55
+msgid "Branding Color"
+msgstr "Marken- /Hauptfarbe"
+
+#: inc/customizer.php:56
+msgid "Define your branding color"
+msgstr "Definieren Sie Ihre Markenfarbe"
+
+#: inc/customizer.php:68
+msgid "Secondary Color"
+msgstr "Zweite Farbe"
+
+#: inc/customizer.php:69
+msgid "Define a secondary color that matches branding color"
+msgstr "Definieren Sie eine zweite Farbe die zu Ihrer Hauptfarbe passt"
+
+#: partials/article-404.php:3
+msgid "Page not found"
+msgstr "Fehler 404 – Die Seite wurde leider nicht gefunden."
+
+#: partials/article-404.php:5
+msgid "Return home?"
+msgstr "Zurück zur Startseite?"
+
+#: partials/article-news.php:13
+msgid "continue reading"
+msgstr "weiterlesen"
+
+#: partials/carousel.php:39
+msgid "Prevs"
+msgstr "vorherige"
+
+#: partials/carousel.php:42
+msgid "Next"
+msgstr "nächste"
+
+#: partials/news.php:21
+msgid "News"
+msgstr "Aktuelles"
+
+#: partials/related-articles.php:7
+msgid "More options"
+msgstr "Weitere Angebote"
+
+#. Name of the theme
+msgid "SAK Default Theme"
+msgstr "SAK Standard Theme"
+
+#. Description of the theme
+msgid "modified from HTML5 Blank WordPress Theme"
+msgstr "angepasst  an HTML5 Blank WordPress Theme"
+
+#. URI of the theme
+msgid "http://html5blank.com"
+msgstr "http://html5blank.com"
+
+#. Author of the theme
+msgid "Claudia Hillen thanks Todd Motto (@toddmotto)"
+msgstr "Claudia Hillen dankt Todd Motto (@toddmotto)"
+
+#. Author URI of the theme
+msgid "http://chilliscope.de"
+msgstr "http://chilliscope.de"

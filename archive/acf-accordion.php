@@ -1,0 +1,137 @@
+<?php 
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_574985c982e12',
+	'title' => 'Aufklapper',
+	'fields' => array (
+		array (
+			'key' => 'field_574987b087286',
+			'label' => 'Accordion',
+			'name' => 'accordion',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => '',
+			'max' => '',
+			'layout' => 'row',
+			'button_label' => 'Eintrag hinzufügen',
+			'sub_fields' => array (
+				array (
+					'key' => 'field_57498afaa047c',
+					'label' => 'Accordion ID',
+					'name' => 'accordion_id',
+					'type' => 'text',
+					'instructions' => 'hier eindeutige ID vergeben, keine Zahlen oder Sonderzeichen am Anfang verwenden.',
+					'required' => '',
+					'conditional_logic' => '',
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+					'readonly' => 0,
+					'disabled' => 0,
+				),
+				array (
+					'key' => 'field_5749893419bce',
+					'label' => 'Headline',
+					'name' => 'headline',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => '',
+					'conditional_logic' => '',
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+					'readonly' => 0,
+					'disabled' => 0,
+				),
+				array (
+					'key' => 'field_57498b8fc06b5',
+					'label' => 'Text',
+					'name' => 'text',
+					'type' => 'wysiwyg',
+					'instructions' => '',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'tabs' => 'all',
+					'toolbar' => 'full',
+					'media_upload' => 1,
+				),
+				array (
+					'key' => 'field_574987d387287',
+					'label' => 'panels',
+					'name' => 'panels',
+					'type' => 'relationship',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array (
+					),
+					'taxonomy' => array (
+					),
+					'filters' => array (
+						0 => 'search',
+						1 => 'post_type',
+						2 => 'taxonomy',
+					),
+					'elements' => '',
+					'min' => '',
+					'max' => '',
+					'return_format' => 'object',
+				),
+			),
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-sub_sub.php',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
+?>
