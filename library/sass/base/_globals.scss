@@ -1,0 +1,207 @@
+@include target-for-fixed-menu(15vH);
+@media screen and (max-width: 667px) {
+    /* prevent horizontal scrolling */
+    body {
+        overflow-x: hidden !important;
+    }
+    #wrapper {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+img {
+    max-width: 100%;
+    height:auto;
+    .logo & {
+        max-width:none;
+        width: 100%;
+        height:auto;
+    }
+    &[class*="wp-image"].alignleft {
+        display: inline;
+        float: left;
+        margin-right: $vertical-spacing/2;
+    }
+    &[class*="wp-image"].alignright {
+        display: inline;
+        float: right;
+        margin-left: $vertical-spacing/2;
+    }
+    &[class*="wp-image"].aligncenter {
+        clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:$vertical-spacing/2;
+    }
+    &[class*="wp-image"].alignnone {
+        display: block;
+        margin-bottom:$vertical-spacing/2;
+    }
+}
+.btn{
+    @include button-style (10px,.7em 1em, 1em );
+
+    @media screen and (max-width:$screen-xs){
+        .row.submit & {
+            margin-bottom:1em;
+        }
+    }
+
+    &:hover, &:focus {
+        color:#fff;
+    }
+    &.btn-inverse{
+        background-color: $bg-inverse;
+        color: $white;
+        background-image: none;
+        background-repeat: repeat-x;
+        border-color: transparent;
+        text-shadow: none;
+
+        .button-group & {
+            margin-right: 1em;
+            color:#fff;
+        }
+    }
+    &.btn-small {
+        @include button-style (3px,5px 10px, 0.850em );
+    }
+    .box &{
+        color: $white;
+    }
+    &[disabled] {opacity: 1;}
+
+}
+
+.iframe-elastic {
+    position: relative;
+    padding-bottom: 55%;
+    padding-top: 15px;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        .page-template-page-standorte-php, .page-template-page-standorte-php & {pointer-events: none;}
+    }
+
+    .page-template-page-standorte-php &{
+        @media screen and (max-width:$screen-xs){
+            padding-bottom: 55% !important;
+            margin-bottom:$vertical-spacing;
+        }
+        @media screen and (min-width:$screen-sm){
+            padding-bottom: 35% !important;
+            margin-bottom:$vertical-spacing;
+        }
+    }
+}
+
+.bubble {
+    @include bubble-style;
+
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-style: solid outset;
+        width: 0;
+    }
+    &:before {
+        border-width: 33px 0 0 33px;
+        bottom: -33px;
+        left: 40px;
+        border-color: $light-gray transparent;
+    }
+    &:after {
+        border-width: 33px 0 0 33px;
+        bottom: -30px;
+        left: 39px;
+        border-color:$bubbleBG transparent;
+    }
+}
+
+.table-responsive{
+    border:0;
+    @media screen and (max-width:$screen-xs){
+        border-top:1px solid $border-color;
+        border-bottom:1px solid $border-color;
+    }
+}
+.qtip {
+  @media screen and (min-width:$screen-sm){position: relative;}
+
+  background: #FCFCD4;
+  color: $text-color;
+  font-size: 1em;
+  line-height: 1.4;
+
+  .hasTooltip {
+    display: inline;
+    margin: 0;
+    padding: 0 0.2em;
+    background: inherit;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & + span {
+      margin: 0;
+      padding: 0;
+
+      &.show {
+        position: absolute;
+        @media screen and (max-width:$screen-sm){
+          max-width:250px;
+          left:25%;
+        }
+        @media screen and (min-width:$screen-sm){
+          top: 10%;
+          left: 50%;
+          min-width: 250px;
+        }
+        @media screen and (min-width:$screen-md){
+          left: 100%;
+        }
+
+        background: inherit;
+        padding: 10px;
+
+        z-index: 99;
+        line-height: 1.2;
+        -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+        box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+
+        .sidebar .widget & {
+          left: auto;
+          right: 100%;
+        }
+
+        strong {
+          @include headline-style (600, 0, 0);
+          text-indent: 0;
+          color: #000;
+          font-size: 14px;
+          display: block;
+        }
+
+        a {
+          color: $brand-primary !important;
+          display: inline;
+        }
+      }
+    }
+  }
+  /*@media screen and (max-width:$screen-xs) {
+    left: 5% !important;
+  }*/
+}
+.no-display{
+    display:none;
+}

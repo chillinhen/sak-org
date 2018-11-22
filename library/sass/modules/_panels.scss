@@ -1,0 +1,47 @@
+.panels {
+	margin: -1em;
+}
+
+.box[class*="post"]{
+    background:$bg-panel;
+/*    border: 1px solid $bd-panel;*/
+    padding: 1em;
+    position: relative;
+    overflow:hidden;
+    min-height:250px;
+    body:not(.ie) & {
+        	/*** Inner Flexbox ***/
+	@include display(flex);
+	@include flex-direction(column);
+	@include align-items(flex-start);
+    }
+    body.ie & {
+        height:auto;
+        flex: 1 0 auto;
+    }
+
+    &[class*="category-sonderinfos"]{
+        background: $brand-primary;
+        &, & *{color:white !important;}
+    }
+
+	.panels &:after{
+		content: '';
+		background: #f2f2f2 url('../img/bg_panel.png') left bottom no-repeat;
+		width: 63px;
+		height: 60px;
+		display: block;
+		text-indent: -100px;
+		overflow: hidden;
+		top: -5px;
+		right: -5px;
+		position: absolute;
+		text-decoration: none;
+	}
+	.panels &:hover:after{
+		display: none;
+	}
+	.text{
+		margin-bottom: 2em;
+	}
+}

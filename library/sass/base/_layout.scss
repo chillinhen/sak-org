@@ -1,0 +1,85 @@
+#wrapper {
+
+    > header{
+        * {
+            color: #fff;
+        }
+        .contact-data{
+            @include align-items(stretch);
+            @include display(flex);
+            @include justify-content(flex-end);
+
+            @media screen and (max-width:$screen-smallPad){
+                @include flex-direction(column);
+            }
+            @media screen and (min-width:$screen-smallPad + 1){
+                @include flex-direction(row);
+            }
+
+
+            > a {
+                 padding:0 .5em;
+                 @media screen and (max-width:$screen-smallPad){
+                     padding-top:.15em;
+                     padding-bottom:.15em;
+                 }
+                 border-left:1px solid currentColor;
+
+                .fa{
+                    float:left;
+                    margin:0 .5em 0 0;
+                }
+                .fa-external-link{display:none;}
+                &:hover{
+                    color:inherit;
+                    opacity: .5;
+                }
+                &:first-child{
+                    border:0;
+                }
+                @media screen and (max-width:$screen-smallPad){
+                    width: 100%;
+                    display:block;
+                    font-size: 3rem;
+                    border:0;
+
+                    i {
+                        display:inline-block;
+                        width: 44px;
+                    }
+                }
+
+                & span{
+                    @media screen and (max-device-width:$screen-xs){
+                        font-size:1.6rem;
+                    }
+                    @media screen and (max-device-width:$screen-xs + 1) and (orientation:landscape){
+                        font-size: 1.2rem;
+                    }
+                    @media screen and (max-width:$screen-smallPad){
+                     font-size:1.6rem;
+                    }
+                }
+                &.facebook span {
+                    @media screen and (min-device-width:$screen-sm){
+                       display:none;
+                    }
+                }
+            }
+        }
+    }
+    > main {
+        background: $mainBg;
+        position:relative;
+        #mainNav{
+           z-index:20;
+           @media screen and (min-width:801px) and  (max-width:991px){
+             margin:{
+               left:-$outer-grid;
+               right:-$outer-grid;
+             }
+           }
+        }
+        #bannerCarousel{z-index:10;}
+    }
+}

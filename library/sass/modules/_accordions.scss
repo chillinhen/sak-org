@@ -1,0 +1,10 @@
+.accordion{
+    > section {
+        @include outer-container(1200px);
+        .main{@include span-columns(8);}
+        .side{@include span-columns(4);}
+    }
+    .accordion-item{
+        margin-bottom:$vertical-spacing;
+    }
+}

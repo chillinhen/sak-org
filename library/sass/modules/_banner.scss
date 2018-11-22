@@ -1,0 +1,40 @@
+#banner{
+	@include outer-container(1200px);
+	html:not(.flexbox) & {
+		> .banner-image, > .banner-half {
+			@media screen and (min-width:$screen-sm){
+				@include span-columns(6);
+			}
+		}
+	}
+
+html.flexbox & {
+	@include display(flex);
+	@include align-items(center);
+	@media screen and (max-width:$screen-sm) {
+		> .banner-image {
+			display: none;
+		}
+
+		> .banner-half {
+			@include flex-basis(100%);
+		}
+	}
+	@media screen and (min-width:$screen-sm) {
+		> .banner-half,
+		> .banner-image {
+			@include flex-basis(50%);
+		}
+	}
+
+}
+
+	.banner-image{
+		text-align: right;
+                img {
+                    max-height:$bannerHeight;
+                }
+                img[alt*="logo-only"]{max-height:$contactImgHeight;margin-right:2em;}
+	}
+
+}

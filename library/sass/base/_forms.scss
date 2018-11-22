@@ -1,0 +1,123 @@
+.btn:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.btn
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.btn:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active{
+    outline: none;
+}
+.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]{
+    margin:0 .5em;
+}
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="confirm_email"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select{ 
+    background-color: $white;
+    @include border-radius(0);
+    border:1px solid $border-color;
+    padding: 2% 5%; 
+    width:100%; 
+    @media screen and (max-width:$screen-xs){
+        width:100%;
+    }
+    @media screen and (min-device-width:$screen-sm + 1) and (orientation:portrait){
+        width: 90%;/*_NO__DOTCOMMA__AFTER__ */
+
+    }
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    @include appearance(none);
+    margin: 0; 
+}
+input[type=number] {@include appearance(textfield);}
+input[type=file]::-webkit-file-upload-button{
+    @include appearance(none);
+    display: inline-block;
+    @include button-style (10px,.7em 1em, 1em );
+    background-color: $bg-inverse;
+    color: $white;
+}
+select {
+    body:not(.ie) &{
+        @include appearance(none);
+        line-height:20px;
+        background-image:url('../img/bg-select.png');
+        background-position: 98% 50%;
+        background-repeat: no-repeat; 
+        width:100%; 
+    }
+
+}
+textarea {
+    max-height: 120px;
+    overflow: auto;
+    resize: vertical;
+}
+.wpcf7{
+    .row{
+        @include outer-container;
+        margin:0 0 $vertical-spacing 0;
+        /*        &.submit{text-align:right;}*/
+        @media screen and (max-width:$screen-xs){
+            [class*="col-"]{
+                @include span-columns(12);
+            }
+        }
+        @media screen and (min-width:$screen-xs){
+            [class*="-4"]{
+                @include span-columns(4);
+            }
+            [class*="col-"]:last-of-type{
+                margin-right:0;
+            }
+
+
+        }
+        .checkbox label{padding:0;@include display(flex);}
+    }
+    /*    .row.submit [class*="col-"]{float:right;}*/
+    [class*="-8"]{
+        @include span-columns(8);
+        @include outer-container(100%);
+    }
+    [class*="-6"]{@include span-columns(6);}
+    [class*="-12"]{
+        @include span-columns(12);
+        &.upload{
+            margin-top:$vertical-spacing/2;
+            input.file{margin-right:$vertical-spacing/2;}
+        }
+    }
+
+    input[type="checkbox"] {
+        position:static;
+        margin:{
+            top:0;
+            left:0;
+        }
+    }
+
+
+}
+.wpcf7-list-item-label {
+    padding:0 .5em;
+    display: inline-block;
+    #excursions &, #booking &{
+        font-weight:500;
+    }
+}

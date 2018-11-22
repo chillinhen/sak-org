@@ -1,0 +1,522 @@
+ @mixin bold{
+     font-weight:600;
+ };/** depends on font-fammily**/
+ /* =============================================================================
+   Variables & Mixins
+   ========================================================================== */
+@mixin headline-style ($weight,$mg-top, $mg-bottom){
+    font-family:$headings-font-family;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    font-weight:$weight;
+    margin-top: $mg-top;
+    margin-bottom: $mg-bottom;
+    a, span{
+        font-family:inherit;
+    }
+}
+%main-headline-style-h3{
+    font-size: 1.429em;
+/*    @media screen and (min-device-width:$screen-lg){
+        font-size: 1.43vW;
+    }*/
+    @media screen and (max-device-width:$screen-xs) and (orientation:portrait){
+        font-size:1.2em;
+    }
+    line-height: 1.2;
+    margin-top:1em;
+    margin-bottom: 0.5em;
+}
+%sidebar-headline-style-h3{
+    font-size: 1.286em;
+    font-weight: 600;
+    margin-top:0;
+    text-transform: none;
+}
+%sidebar-panel-style-h3{
+    color:#000;
+    margin-right:0;
+}
+%panel-headline-style{
+    font-size: 1.2em !important;
+    margin-top:0;
+    min-height:50px;
+}
+/* =============================================================================
+   Basics
+   ========================================================================== */
+
+html { font-size: 62.5%; -webkit-text-size-adjust: auto; -ms-text-size-adjust: auto;}
+
+html, body, button, input, select, textarea {
+    font-family:$body-font-family;
+    color: $text-color; }
+
+::-moz-selection {
+    text-shadow: none;
+    @include active-style;
+}
+::selection {
+    text-shadow: none;
+    @include active-style;
+}
+.element {
+  @include selection(true) {
+    background-color: #ffbb52;
+  }
+}
+// body typography
+body {
+    text-rendering: optimizeLegibility;
+    font-size:$rem-base;
+    font-weight:400;
+    line-height: $base-line-height;
+}
+a {
+    &,&:link {
+        text-decoration: none;
+        cursor:pointer;
+    }
+
+    .site-content p &, .site-content p span &, .trail-items &{
+        color: $brand-primary;
+        &:hover{
+           color: $brand-secondary;
+           text-decoration: underline;
+        }
+    }
+    .panels .text &:not(.btn){
+        color: $brand-primary;
+        &:hover{
+           color: $brand-secondary;
+           text-decoration: none;
+        }
+    }
+    [class*="footer"] & {
+        color:$white;
+    }
+    &:visited{
+        opacity:.5;
+    }
+    &:visited, &.help:hover {
+        text-decoration: none !important;
+    }
+    &.help i:hover { cursor: pointer }
+    &:hover,&:focus {outline:none;}
+
+    .btn {
+        > & {
+            color:inherit;
+            display: block;
+            cursor: pointer;
+        }
+        &:hover{
+            text-decoration: none;
+            color:inherit;
+            opacity:.5;
+        }
+    }
+    &.external:after{
+        @include icon-style ("\f08e", 0, 1, .5em, .8em);
+    }
+    .contact-data &.external:after{
+        @include icon-style (" ", 0, 0, 0, 0);
+    }
+}
+h1,h2,h3,h4, legend, .number, .widgettitle{
+    @include headline-style (400, 0, 1em);
+    line-height: 1.1;
+    color: $heading-text-color;
+    &.logo{
+        margin:2em 0 .5em 0;
+    }
+    a{
+        text-decoration: none;
+        color: $brand-primary;
+    }
+}
+.page-title{
+    @media screen and (max-width:$screen-smallPad){
+        margin-top:0;
+        word-wrap: initial;
+        .page-header &{
+            display:none;
+        }
+    }
+
+    body.search & {display: block;}
+    body[class*="-standorte"] &,
+    body[class*="-main"]{
+        display: none;
+    }
+    .related & {
+        min-height:2.4em;
+    }
+}
+// different font-sizes
+h1 {
+    font-size:1.5 * $rem-base;
+    line-height: 1;
+    color: #000;
+    @media screen and (max-width:$screen-xs){
+        font-size:2em;
+    }
+    .panel &{
+        @extend %panel-headline-style;
+    }
+    article &, #banner &{
+        @extend h2;
+        color:$brand-primary;
+    }
+}
+
+h2 {
+    font-size:2.143 * $rem-base;
+    line-height: 1;
+    #banner &{
+        @extend %main-headline-style-h3;
+    }
+    body.home .main-content &{
+        font-size:1.2em;
+        color:$text-color;
+        text-transform:none;
+        font-weight:bold;
+    }
+    .category-link{margin-bottom: .2em;}
+    .panel &{
+        @extend %panel-headline-style;
+    }
+    @media screen and (max-width:$screen-xs){
+        font-size:1.5em;
+    }
+}
+h1, h2{
+  &.page-title{
+    display:none;
+  }
+}
+
+
+h3 {
+    @extend %main-headline-style-h3;
+    .sidebar &, aside & {
+        @extend %sidebar-headline-style-h3;
+
+        a {
+            @extend %sidebar-panel-style-h3;
+        }
+    }
+    .sidebar .box &, aside .box & {
+        @extend %sidebar-panel-style-h3;
+        a {@extend %sidebar-panel-style-h3; }
+    }
+    .single-event & {
+        font-size:1em;
+        font-weight: 600;
+    }
+    .box & {
+        margin: {
+            top:1em;
+            right:2em;
+        }
+    }
+    .box & > a.ellipsis {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        word-wrap: break-word;
+        display:block;
+    }
+    .post_content ul + &{margin-top:1em;}
+}
+
+h1, h2, h3 {
+    a{
+        &:hover{
+            text-decoration:none;
+            cursor:pointer;
+        }
+    }
+         &.collapseHeadline > a:first-child{
+
+            &:before{
+                padding-right: .5em;
+            }
+
+            &:hover{
+                cursor:pointer;
+            }
+        }
+}
+
+h4,.h4,h5,.h5,h6,.h6 {
+    font-size: 1.2em;
+}
+
+sup{
+  top:-.25em;
+}
+legend {
+    border{
+        width:1px 0 0 0;
+        style:solid;
+        color:$border-color;
+        margin-top:1em;
+    }
+}
+// paragraph text
+p {
+    margin: 0 0 $paragraph-margin;
+    font-family: inherit;
+    font-size: $rem-base;
+    font-weight: normal;
+    line-height: $base-line-height;
+
+
+    &.lead {
+/*        font-size: 1rem * 1.125;*/
+        font-size:1em;
+        line-height: 1.4;
+    }
+}
+
+a{
+
+    color:$brand-primary;
+    &:hover{
+        color:inherit;
+        cursor:pointer;
+    }
+    .events-table &{
+        color:#fff !important;
+    }
+    .logo &{
+        display:block;
+        body.home & {color:#fff;}
+    }
+    .footer &{
+        text-decoration: none;
+    }
+}
+// lists
+ul,
+ol {
+    padding-left: 1.5rem;
+    .panels & {
+        margin-left:1.5rem;
+    }
+
+    li {
+        line-height: $base-line-height;
+    }
+
+    &.unstyled {
+        padding: 0;
+        list-style: none;
+    }
+
+    &.inline {
+        margin: 0 1rem $paragraph-margin -1rem;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+
+        & > li {
+            display: block;
+            float: left;
+            margin-left: 1rem;
+            list-style: none;
+        }
+    }
+}
+ul {
+    .sidebar & {
+        padding:0;
+        li {
+            list-style:none;
+            text-indent: -1.35em;
+            margin:0 0 .5em 1.5em;
+            &:before{
+                @include icon-style ("\f0da", 0, 1, 0, 1em);
+                display:inline-block;
+                margin-left:1.2em;
+            }
+        }
+    }
+}
+
+dl {
+    margin: 0 0 $paragraph-margin;
+    line-height: $base-line-height;
+}
+
+dt {
+    font-weight: bold;
+    /** oder **/
+    @include bold;
+}
+
+dd {
+    margin: 0 0 0.5rem;
+}
+
+b,.bold, strong{
+    @include bold;
+}
+p, .close{
+    font-size: 1em;
+}
+// blockquotes
+blockquote {
+    border-left: 2px solid $brand-primary;
+    position: relative;
+    margin: 1.5rem 1rem 1.5rem 3rem;
+    text-align: left;
+
+    p {
+        @extend .lead;
+    }
+
+    &:before {
+        content: "“";
+        display: block;
+        position: absolute;
+        top: -1rem;
+        left: -3rem;
+        color: $text-muted-color;
+        font-size: 5rem;
+        line-height: 1;
+    }
+}
+address{
+    font-style: normal;
+    .footer & {
+
+        p{
+            margin-bottom: $paragraph-margin * 0.2;
+            font-size: .8rem;
+        }
+        > div {
+            margin-bottom: $paragraph-margin * 0.5
+        }
+    }
+}
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-muted { color: $text-muted-color; }
+.text-smaller {font-size: smaller;}
+.uppercase{
+    text-transform:uppercase;
+}
+
+/*** tables ****/
+table {
+    width:100%;
+    margin-bottom:2em;
+}
+/**** Misc ***/
+.screen-reader-text{
+	clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+/* Kleinerer Text */
+.s {
+    font-size: 0.9em;
+}
+.lead {
+    @media screen and (min-width: $screen-xs) {
+        font-size:1.143em;
+        font-weight:inherit;
+        line-height:inherit;
+        margin-bottom: 1.857em;
+
+        article.banner &, .banner-caption &{
+            margin-bottom: 1em;
+        }
+        .panel &{font-size: 1em;}
+    }
+}
+.contact-data{
+    @extend .lead;
+}
+/***** Accordion Headlines****/
+.collapseHeadline, h2.tablepress-table-name, legend {
+    font-size:2em;
+    margin:1em 0 .5em 0;
+    @media screen and (max-width:$screen-xs){
+        font-size:1.4em;
+    }
+    > a:first-child {
+        span{
+            display: inline-block;
+            float:left;
+
+
+            @media screen and (max-width:$screen-xs){
+                width:80%;
+            }
+            @media screen and (min-width:$screen-xs + 1){
+                width:90%;
+            }
+        }
+
+        &.no-icon{
+            ~ i{display:none;}
+        }
+
+        i.fa{
+            float: left;
+            margin-right: 16px;
+        }
+        &:hover, &:active {
+            text-decoration: none;
+            outline: none;
+        }
+    }
+    & + div {
+        @media screen and (max-width:$screen-sm){
+          padding-left:0px;
+        }
+        @media screen and (min-width:$screen-sm + 1){
+            padding-left:40px;
+        }
+    }
+
+    .accordion & + div {
+        padding-left: 0;
+    }
+
+    &:first-child{
+        margin-top:0;
+    }
+}
+/*------------------------------------------------
+Galleries
+--------------------------------------------------*/
+.gallery-caption{
+  font-size:.75em;
+  color:$caption-color;
+  line-height: 1.1;
+  margin-top: .25em;
+}
+/*------------------------------------------------
+Sonderfälle
+--------------------------------------------------*/
+.carousel-caption > *,
+legend, h2.category-link, h2.category-link a .panel h3, .number{
+    color: $brand-primary;
+}
+
+.copyright{
+    font-size: small;
+    text-align: center;
+}
+.breadcrumbs{
+    @media screen and (min-width:$screen-md){text-align: right;}
+}

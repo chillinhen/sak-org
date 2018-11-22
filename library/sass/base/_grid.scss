@@ -1,0 +1,208 @@
+.container{
+    @include outer-container(1200px);
+    padding:0 $outer-grid;
+    > div, > footer{
+        margin:$vertical-spacing 0;   
+    }
+    > div.contact-data, > footer.contact-data{
+        margin:$vertical-spacing/2 0;   
+    }
+    &#header{
+        @media screen and (max-width:$screen-xs){
+
+            @media screen and (orientation:portrait){
+                .logo{
+                    @include svg-scale(200px);
+                    padding-bottom:120px;
+                }
+                > .contact-data{
+                    margin-top:3em;
+                }
+            }
+        }
+        @media screen and (max-width:$screen-maxPhone){
+            .logo{
+                @media screen and (orientation:portrait){
+                    margin:0 $vertical-spacing/2;
+                }
+                @media screen and (orientation:landscape){
+                    margin:$vertical-spacing/2 50% $vertical-spacing/2 0;
+                } 
+            }
+        }
+        @media screen and (min-width:$screen-sm){
+            @include display(flex);
+            @include flex-direction(row);
+            @include align-items(center);
+            > .logo{
+                @include flex-basis(25%);
+                margin:$vertical-spacing/2 0 $vertical-spacing/4 0;
+            }
+            > .contact-data{
+                @include flex-basis(75%);
+            }
+        }
+        @media screen and (min-width:$screen-md){
+            @include align-items(flex-end); 
+        }
+    }
+    .site-content{
+        /** ToDo Proof **/
+        body[class*="page-main"] &{
+            @media screen and (min-device-width:$screen-md) and (orientation:landscape){
+                margin:0;
+            }
+        }
+        @include outer-container(1200px);
+
+        @media screen and (min-device-width:$screen-md) and (orientation:landscape){
+            .main-content{@include span-columns(8);}
+            .sidebar{@include span-columns(4);}
+        }
+    }
+    [id*="collapse"].post_content{
+        @include outer-container;
+        @media screen and (min-device-width:$screen-md) and (orientation:landscape){
+            .main{@include span-columns(8);}
+            .side{@include span-columns(4);}
+        }
+
+    }
+    .panels{
+        clear:both;
+        margin:0 -1em;
+        @include collapse-vert-style;
+        @include display(flex);
+        /*        @include justify-content(space-between);*/
+        @include align-items(stretch);
+        @media screen and (max-width:$screen-sm - 1){
+            @include flex-direction(column);
+        }
+        @media screen and (min-width:$screen-sm){
+            @include flex-direction(row);
+        }
+        > * {
+            margin: 1em;
+        }
+        &.related{
+            > * {
+                @include flex(1);
+            }
+        }
+        &.subpanels,
+        &.smallpanels{
+            @include flex-wrap(wrap);
+            @include flex-grow(1);
+            > * {
+                @media screen and (min-width:$screen-md){
+                    &:last-child{
+                        @include flex-grow(0);
+                        @include flex-shrink(0);  
+                    }
+                }
+            }
+        }
+        &.smallpanels{
+            > * {
+                @media screen and (min-width:$screen-md){
+                    @include flex-basis(calc(100%/2 - 2em));
+                    max-width:(calc(100%/2 - 2.15em));
+                    /*                    &:last-child{
+                                            @include flex-grow(0);
+                                            @include flex-shrink(0);  
+                                        }*/
+                }
+            }
+        }
+        &.subpanels{
+            > * {
+
+                @media screen and (max-width:$screen-smallPad){
+                    @include flex-basis(calc(100%));
+                    margin-bottom:2em;
+                }
+                @media screen and (min-width:$screen-smallPad)and (max-width:$screen-md - 1){
+                    @include flex-basis(calc(100%/2 - 2em));
+                    max-width:(calc(100%/2 - 2.15em));
+                }
+                @media screen and (min-width:$screen-md){
+                    @include flex-basis(calc(100%/3 - 2em));
+                    max-width:(calc(100%/3 - 2.15em));
+                    /*                    &:last-child{
+                                            @include flex-grow(0);
+                                            @include flex-shrink(0);  
+                                        }*/
+                }
+            }
+        }
+        .box {
+            @media screen and (min-width:$screen-smallPad){
+                @include display(flex);
+                @include flex-direction(column);
+                @include justify-content(space-between);
+                /*                @include flex-basis(33%);*/
+                > .text{@include flex(2);}
+            }
+
+        }
+
+    }
+}
+.full-content{
+    @include outer-container(1200px);
+    padding: $vertical-spacing 0 0 0;
+    .main-content + &,
+    .panels + &{@include separator(1px 0 0 0);}
+    .box,  .related {
+        @media screen and (min-width:$screen-sm){
+            @include flex-basis(33%);         
+        }  
+    }
+    & > .related{
+        @include display(flex);
+        @media screen and (max-width:$screen-sm - 1){
+            @include flex-direction(column);
+        }
+    }
+}
+.footer-info{
+    @include flexbox;
+    .footer-logo{
+        @media screen and (max-width:$screen-sm){
+            order: 2;
+        }
+    }
+    address{
+        @include flex(2);
+        text-align: center;
+        @media screen and (max-width:$screen-sm){
+            order: 1;
+            margin: 20px 0;
+        }
+    }
+    @media screen and (max-width:$screen-sm){
+        .revoke-cookies{
+            order: 10;
+            text-align: right;
+            display: inline-block;
+            margin-top:-24px;
+        }
+    }
+}
+
+[id*="banner"]{
+    @media screen and (max-width:$screen-sm - 1){
+        display:none;
+    }
+}
+
+.main-content, 
+.sidebar,
+#footer{
+    > * {
+        margin:$vertical-spacing 0 0 0;
+    }
+    .service-links, .main-content, .sidebar, .sidebar > *:first-child{
+        @include collapse-vert-style;
+    }
+}

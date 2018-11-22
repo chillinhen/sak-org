@@ -1,0 +1,48 @@
+.wpcf7{
+    .col-4 label{padding:2% 5%;}
+}
+.wpcf7-form-control-wrap{
+
+
+    input[type="checkbox"] {
+        position:static;
+        margin:{
+            top:0;
+            left:1em;
+        }
+    }
+    input[type="checkbox"].wpcf7-acceptance{
+        float:left;
+
+        @include size (1em);
+        margin:{
+            right:1em;
+        }
+    }
+    > .wpcf7-checkbox {
+        display:block;
+        /*special for Contact/Appointments*/
+        &#time{
+
+            @include outer-container;
+            .wpcf7-list-item{
+                @include span-columns(5);
+            }
+            .wpcf7-list-item:nth-child(even){
+                @include omega();
+            }
+        }
+
+    }
+}
+.wpcf7-list-item{
+    .agb &,
+    .registration &{
+        margin:0 1em 0 -1em;
+    }
+    .excursions &,
+    .booking &{
+        margin:.5em 0;
+        input[type="checkbox"]{margin:0 !important;}
+    }
+}
