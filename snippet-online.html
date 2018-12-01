@@ -1,0 +1,91 @@
+<!-- 2019 -->
+<legend id="anfrage">Buchungsformular</legend>
+<fieldset>
+
+  <div class="row select required">
+    <div class="col-md-4">
+      <label id="form-of-address">Anrede: *</label>
+    </div>
+    <div class="col-md-8 clearfix">
+      [select* form-of-address id:form-of-address class:form-of-address include_blank "Herr" "Frau"]
+    </div>
+  </div>
+  <div class="row input-field required">
+    <div class="col-md-4">
+      <label for="last-name">Familienname: *</label>
+    </div>
+    <div class="col-md-8 clearfix">
+      [text* last-name id:name class:last-name placeholder "Familienname"]
+    </div>
+  </div>
+  <div class="row input-field required">
+    <div class="col-md-4">
+      <label for="first-name">Vorname: *</label>
+    </div>
+    <div class="col-md-8 clearfix">
+      [text* first-name id:first-name class:first-name placeholder "Vorname"]
+    </div>
+  </div>
+  <div class="row text-field">
+    <div class="col-md-4">
+      <label for="date-of-birth">Geburtsdatum: *</label>
+    </div>
+    <div class="col-md-8 clearfix">
+      [text* date-of-birth id:date-of-birth class:date-of-birth placeholder "01.01.1900"]
+    </div>
+  </div>
+
+  <div class="row email-field required">
+    <div class="col-md-4">
+      <label for="email">E-Mailadresse: *</label>
+    </div>
+    <div class="col-md-8 clearfix">
+      [email* email id:email class:email placeholder "E-Mailadresse"]
+    </div>
+  </div>
+  <div class="row accomodation select required">
+    <div class="col-md-4">
+      <label for="accomodation">Ich möchte folgende Unterkunft reservieren:</label>
+    </div>
+    <div class="col-md-8">
+      [select* accomodation id:accomodation class:accomodation "Bett im Mehrbettzimmer
+      - 490,-€" "Bett im Doppelzimmer (Aachen) + Bett im Mehrbettzimmer (Berlin) - 540,-€" "Einzelzimmer (Aachen) + Bett im Mehrbettzimmer (Berlin) - 640,-€" "Nein, ich brauche keine Unterkunft"]
+    </div>
+  </div>
+  [group group-booking]
+  <div class="row booking required">
+    <div class="col-md-4"> </div>
+    <div class="col-md-8 checkbox">[checkbox* booking id:booking class:booking use_label_element "* Ich akzeptiere die oben genannten Konditionen zur Unterkunftsbuchung."]</div>
+  </div>
+  [/group]
+
+  <div class="row excursions">
+    <div class="col-md-4">
+      <label for="excursions">
+        Hiermit buche ich VERBINDLICH folgende Exkursionen:
+      </label>
+    </div>
+    <div class="col-md-8 checkbox">
+      [checkbox excursions id:excursions class:excursions use_label_element "Exkursion nach AMSTERDAM (Niederlande) -- 12.01.2019 -- 53,- €""Exkursion nach PARIS (Frankreich) -- 26.-27.01.2019 -- 134,- €"]
+    </div>
+  </div>
+</fieldset>
+
+
+<p class="lead">Die im Formular angegebenen personenbezogenen Daten, insbesondere Name, Anschrift und Geburtsdatum, sind allein zum Zwecke der Bearbeitung Ihrer Anfrage erforderlich. Sie werden von der Sprachenakademie Aachen gGmbH unter Einhaltung
+  datenschutzrechtlicher Bestimmungen verarbeitet. Detaillierte Erläuterungen zum Datenschutz sowie zu Ihren Widerrufsmöglichkeiten finden Sie <a href="https://www.spraachen.org/de/datenschutz/" target="_blank">hier</a>.</p>
+
+<div class="row checkbox">
+  <div class="col-md-12">[acceptance datenschutz id:datenschutz class:datenschutz] * Ich bin damit einverstanden, dass meine personenbezogenen Daten zum Zwecke der Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. </div>
+</div>
+
+
+<fieldset>
+  <div class="row clearfix submit">
+    <div class="col-md-4"> </div>
+    <div class="col-md-8">
+      [submit id:form-submit class:form-submit class:btn class:btn-inverse "Buchen!"] <input type="reset" class="btn btn-inverse" value="Angaben zurücksetzen" />
+    </div>
+  </div>
+
+</fieldset>
