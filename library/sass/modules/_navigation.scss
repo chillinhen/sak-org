@@ -370,10 +370,15 @@ ul[class*='menu']{
 }
 /*** copyright ***/
 .copyright{
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
     margin: 1em auto 0 auto;
     font-size: smaller;
     text-align: center;
     color: $white;
+
+    a:hover{text-decoration:none;}
 }
 /*** ende copyright ***/
 /*** Breadcrumb ****/

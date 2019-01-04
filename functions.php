@@ -226,7 +226,7 @@ function html5blank_styles() {
     wp_enqueue_style('html5blank'); // Enqueue it!
     wp_register_style('screen', get_stylesheet_directory_uri() . '/library/css/screen.min.css', 'style', '1.0', 'all', array('html5blank'));
     wp_enqueue_style('screen');
-    wp_register_style('print', get_stylesheet_directory_uri() . '/library/css/print.min.css', 'style', '1.0', 'print', array('screen'));
+    wp_register_style('print', get_stylesheet_directory_uri() . '/library/css/print.min.css', 'style', '1.0', 'print', array('print'));
     wp_enqueue_style('print');
 }
 

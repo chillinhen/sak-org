@@ -27,9 +27,12 @@
 
 </main>
 <!-- copyright -->
-<p class="copyright container">
+<div class="copyright container">
+    <p>
     &copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>
-</p>
+    </p>
+    <a id="print"><i class="fa fa-print"></i>  <?php _e('Print', 'html5blank'); ?></a>
+</div>
 <!-- /copyright -->
 <div class="scroll-to-top"><i class="fa fa-angle-up fa-2x"></i></div>
 </div>
@@ -51,7 +54,7 @@ if ($analytics):
     <?php echo strip_tags($analytics); ?>
     </script>
 <?php endif; ?>
-<!-- analytics -->  
+<!-- analytics -->
 
 </body>
 </html>

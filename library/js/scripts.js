@@ -1,6 +1,33 @@
 (function ($, root, undefined) {
     $(function () {
-      //console.log('ready!');
+      console.log('ready!');
+      //switch stylesheets
+      //$('#print').css('display', 'block');
+      /*$('#print').click(function() {
+            $("head link#print-css").attr("media", 'screen');
+            //window.print();
+          });*/
+          //var stylesheet = $("head link#print-css").attr("media", 'screen');
+    $('#print').on({
+      click: function(e) {
+        var stylesheet = $("head link#print-css").attr("media");
+        if(stylesheet == "screen"){
+          console.log('screen');
+          $("head link#print-css").attr("media","print");
+        } else {
+          console.log('print');
+          $("head link#print-css").attr("media","screen");
+          window.print();
+        }
+        /*if(!$("head link#print-css").attr("media", 'screen')){
+          console.log('print');
+        }
+        else {
+          console.log('screen');
+        }*/
+
+      }
+    });
       /*** Language switch ***/
       $('.lang-item').each(function () {
           $(this).children('a').wrapInner('<span></span>');
@@ -191,5 +218,6 @@
           $('html, body').animate({scrollTop: 0}, 800);
           return false;
       });
+
     });
 })(jQuery, this);

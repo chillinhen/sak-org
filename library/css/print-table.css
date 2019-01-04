@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@media print {
+  /*** setup page margin ***/
+  @page {
+    margin: 2cm 1.5cm; }
+  body {
+    font-family: 'Ubuntu', Arial,Helvetica, sans-serif !important;
+    font-size: 12pt;
+    line-height: 1.3;
+    position: relative; }
+
+  h1 {
+    font-size: 24pt; }
+
+  h2 {
+    font-size: 14pt;
+    margin-top: 25px; }
+
+  .sidebar h2, sidebar h3 {
+    font-size: 18pt; }
+
+  /*** Globals ***/
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  ul {
+    list-style: none; }
+
+  li {
+    content: "» "; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; }
+
+  p a {
+    word-wrap: break-word; }
+
+  .show-url, .post_content a[href]:after {
+    content: " (" attr(href) ")" !important;
+    font-size: 80%;
+    font-style: italic;
+    text-transform: normal;
+    margin-left: .5em; }
+
+  a[href^="#"]:after,
+  a[href^="tel:"]:after,
+  a[href^="javascript:"]:after {
+    content: " ";
+    display: none; }
+
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+    color: #000; }
+
+  a.hasTooltip {
+    content: ' '; }
+    a.hasTooltip + span {
+      display: none !important; }
+
+  .row.related {
+    page-break-before: always; }
+    .row.related article {
+      border: 1px solid transparent; }
+
+  .post-translation, .post-translation:after {
+    /*display: none;*/ }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /** prevend images to bleed from paper ***/
+  img {
+    max-width: 100% !important; }
+
+  h1#logo a[href]:after,
+  #newsCarousel a[href]:after,
+  .page-title.collapseHeadline a[href]:after,
+  .gallery-icon a[href]:after,
+  .sidebar a[href]:after,
+  .related a[href]:after,
+  #breadcrumb a[href]:after,
+  .page-template-page-organigram a[href]:after {
+    content: " " !important; }
+
+  /*** remove clutter ***/
+  .row.navigation,
+  .row.sitemap,
+  #banner img.wp-post-image,
+  #languages-menu,
+  .more-link-corner,
+  .more-link-corner:after,
+  #menu-footer-links-deutsch,
+  .scroll-to-top,
+  #bannerCarousel,
+  .bubble:before, .bubble:after,
+  .collapseHeadline a:before,
+  .wpcf7,
+  .row.footer-links-list,
+  #footer,
+  .credits {
+    display: none !important; }
+
+  #header {
+    display: block;
+    width: 100%; }
+    #header .row.top-section {
+      display: block; }
+      #header .row.top-section [class*="col"] {
+        display: inline-block;
+        width: 50%; }
+
+  #logo .screen-only {
+    display: none !important; }
+  #logo .print-only {
+    display: block !important; }
+
+  #contact-data * {
+    color: #000 !important; }
+
+  #banner {
+    height: auto; }
+    #banner .banner-caption {
+      left: -100%; }
+
+  .row.panels div[class*="col"] {
+    width: 100% !important;
+    float: none; }
+    .row.panels div[class*="col"] .panel {
+      border: 0;
+      height: auto !important; }
+      .row.panels div[class*="col"] .panel h3 {
+        border-bottom: 1px solid #000; }
+      .row.panels div[class*="col"] .panel .text {
+        min-height: 50px; }
+      .row.panels div[class*="col"] .panel .btn {
+        padding: 0; }
+
+  #newsCarousel .bubble {
+    border: 0; }
+
+  [id*="collapse"], [id*="tablepress"] {
+    display: block;
+    visibility: visible;
+    height: auto !important; }
+
+  [id*="gallery"] + h3 {
+    margin: 3em 0 0 0; }
+
+  .gallery-item .gallery-caption {
+    position: relative; }
+
+  .page-template-page-organigram * {
+    font-size: 8px !important;
+    color: #000 !important; }
+  .page-template-page-organigram .zoomContainer .zoomBox div {
+    border: 1px solid #333;
+    text-align: center;
+    width: 2.5cm;
+    min-height: 2cm;
+    margin: 1mm; }
+    .page-template-page-organigram .zoomContainer .zoomBox div * {
+      white-space: normal; }
+    .page-template-page-organigram .zoomContainer .zoomBox div p:last-child a {
+      display: none; }
+  .page-template-page-organigram .zoomContainer #gf > div:first-child > div {
+    width: 17cm; } }
+
+/*# sourceMappingURL=print.css.map */
